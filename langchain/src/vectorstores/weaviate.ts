@@ -72,13 +72,13 @@ export interface WeaviateFilter {
 export class WeaviateStore extends VectorStore {
   declare FilterType: WeaviateFilter;
 
-  private client: WeaviateClient;
+  protected client: WeaviateClient;
 
-  private indexName: string;
+  protected indexName: string;
 
-  private textKey: string;
+  protected textKey: string;
 
-  private queryAttrs: string[];
+  protected queryAttrs: string[];
 
   constructor(public embeddings: Embeddings, args: WeaviateLibArgs) {
     super(embeddings, args);
